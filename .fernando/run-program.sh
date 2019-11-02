@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
+if [[ "$#" -ne 1 ]]; then
+    echo "Nombre d'arguments invalide : l'argument du script doit être le numéro du problème !"
+    exit 1
+fi
+
 PROBLEM_NUMBER=$1
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 INPUT_FILE_REGEX='input([[:digit:]]*)\.txt$'
-EPREUVE_FOLDER="./epreuve-$PROBLEM_NUMBER"
+EPREUVE_FOLDER="$DIR/epreuve-$PROBLEM_NUMBER"
 
 for filename in "$EPREUVE_FOLDER"/input*.txt; do
   echo "Lecture du fichier : $filename"
@@ -20,7 +26,7 @@ for filename in "$EPREUVE_FOLDER"/input*.txt; do
     expected_output=$(cat "$expected_output_file")
 
     echo "Execution du programme en cours..."
-    program_output=$(../mvnw compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f ".." -Dexec.args="$filename" -q)
+    program_output=$(mvn compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
 
     if [ "$program_output" = "$expected_output" ]; then
       echo "Le programme a bien retourné la valeur attendue !"
