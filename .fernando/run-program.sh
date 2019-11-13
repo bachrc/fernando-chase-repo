@@ -26,7 +26,7 @@ for filename in "$EPREUVE_FOLDER"/input*.txt; do
     expected_output=$(cat "$expected_output_file")
 
     echo "Execution du programme en cours..."
-    program_output=$(mvn compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
+    program_output=$("$DIR/../mvnw" compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
 
     if [ "$program_output" = "$expected_output" ]; then
       echo "Le programme a bien retourné la valeur attendue !"
