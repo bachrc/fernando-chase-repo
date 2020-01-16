@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+userProgramOutput() {
+  "$DIR/../mvnw" compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$1" -q
+}
+
 if [[ "$#" -ne 1 ]]; then
     echo "Nombre d'arguments invalide : l'argument du script doit être le numéro du problème !"
     exit 1
@@ -19,7 +23,7 @@ for filename in "$EPREUVE_FOLDER"/input*.txt; do
 
     if [[ "$PROBLEM_NUMBER" -eq "3" ]]; then
       echo "Execution du programme en cours..."
-      program_output=$("$DIR/../mvnw" compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
+      program_output=$(userProgramOutput "$filename")
 
       echo "Analyse de l'itinéraire donné..."
       "$DIR/epreuve-3/parser-unix" "$filename" "$program_output"
@@ -37,7 +41,7 @@ for filename in "$EPREUVE_FOLDER"/input*.txt; do
     expected_output=$(cat "$expected_output_file")
 
     echo "Execution du programme en cours..."
-    program_output=$("$DIR/../mvnw" compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
+    program_output=$(userProgramOutput "$filename")
 
     if [ "$program_output" = "$expected_output" ]; then
       echo "Le programme a bien retourné la valeur attendue !"
