@@ -13,8 +13,19 @@ EPREUVE_FOLDER="$DIR/epreuve-$PROBLEM_NUMBER"
 
 for filename in "$EPREUVE_FOLDER"/input*.txt; do
   echo "Lecture du fichier : $filename"
+
   if [[ $filename =~ $INPUT_FILE_REGEX ]]; then
     input_file_number="${BASH_REMATCH[1]}"
+
+    if [[ "$PROBLEM_NUMBER" -eq "3" ]]; then
+      echo "Execution du programme en cours..."
+      program_output=$("$DIR/../mvnw" compile test exec:java -Dexec.mainClass=fr.lacombe.fernandochase.Main -f "$DIR/.." -Dexec.args="$filename" -q)
+
+      echo "Analyse de l'itinéraire donné..."
+      "$DIR/epreuve-3/parser-unix" "$filename" "$program_output"
+      exit $?
+    fi
+
     expected_output_file="$EPREUVE_FOLDER/output$input_file_number.txt"
 
     if ! test -f "$expected_output_file"; then
