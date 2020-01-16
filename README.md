@@ -14,7 +14,6 @@ Commencez à explorer tout de suite les langages disponibles ! :)
 
 Vous pouvez modéliser le programme de vos rêves, cependant il y a certains fichiers que vous ne devez pas modifier sous peine de disqualification. Tels que :
 
-- Le fichier `.gitlab-ci.yml`
 - Tout ce qui se trouve sous le dossier `.fernando`
 
 Vous pouvez perdre du temps à les regarder, mais si vous voyons des commits de modifications dans ces deux endroits : c'est disqualification, alors attention !
