@@ -4,7 +4,7 @@ import os
 import sys
 
 
-def main(argv):
+def retrieveFileContent(argv):
     inputfile = ''
     try:
         opts, args = getopt.getopt(argv, "hi:", ["ifile="])
@@ -17,13 +17,16 @@ def main(argv):
             sys.exit()
         elif opt in ("-i", "--ifile"):
             inputfile = arg
+
     if os.path.isfile(inputfile):
         with open(inputfile, 'r') as content_file:
             content = content_file.read()
-            print(content)
+            return content
     else:
         raise Exception(' Input file does not exist: {}'.format(inputfile))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    fileContent = retrieveFileContent(sys.argv[1:])
+
+    print(fileContent)

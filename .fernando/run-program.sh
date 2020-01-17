@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 userProgramOutput() {
-  python ../main.py -i $1
+  python "$DIR/../main.py" -i "$1"
 }
 
 if [[ "$#" -ne 1 ]]; then
