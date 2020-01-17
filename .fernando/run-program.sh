@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 userProgramOutput() {
-  node ../index.js $1
+  node "$DIR/../index.js" "$1"
 }
 
 if [[ "$#" -ne 1 ]]; then
