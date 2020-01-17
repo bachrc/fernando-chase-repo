@@ -1,0 +1,12 @@
+{
+  "name": "fernando-chase-repo",
+  "version": "1.0.0",
+  "description": "Fernando chase ! Vamos !",
+  "main": "index.js",
+  "repository": "https://github.com/bachrc/fernando-chase-repo.git",
+  "author": "FABIEN LABROUSSE <fabien-externe.labrousse@edf.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
