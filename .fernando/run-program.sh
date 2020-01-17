@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 userProgramOutput() {
-  echo "Insérez ici la commande nécessaire pour lancer le programme et afficher son retour ! Sachant que $1 est le chemin du fichier !"
+  ../Main/bin/Debug/Main.exe $1
 }
 
 if [[ "$#" -ne 1 ]]; then

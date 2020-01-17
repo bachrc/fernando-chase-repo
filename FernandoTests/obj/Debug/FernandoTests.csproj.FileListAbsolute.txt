@@ -1,0 +1,10 @@
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\FernandoTests.dll
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\FernandoTests.pdb
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\Main.exe
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\nunit.framework.dll
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\Main.pdb
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\bin\Debug\nunit.framework.xml
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\obj\Debug\FernandoTests.csprojAssemblyReference.cache
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\obj\Debug\FernandoTests.csproj.CopyComplete
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\obj\Debug\FernandoTests.dll
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\FernandoTests\obj\Debug\FernandoTests.pdb

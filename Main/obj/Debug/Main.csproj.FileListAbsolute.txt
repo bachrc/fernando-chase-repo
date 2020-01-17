@@ -1,0 +1,5 @@
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\Main\bin\Debug\Main.exe
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\Main\bin\Debug\Main.pdb
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\Main\obj\Debug\Main.csprojAssemblyReference.cache
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\Main\obj\Debug\Main.exe
+C:\Users\godxy\Documents\Projets\Fernando\Csharp\Fernando\Main\obj\Debug\Main.pdb
